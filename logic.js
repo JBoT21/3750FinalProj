@@ -23,3 +23,13 @@ $("#contactButton").click(function() {
 $("#aboutButton").click(function() {
     alert("About button clicked!");
 });
+
+
+$(document).ready(function() {
+    $("#login").submit(function(event) {
+        event.preventDefault();
+        var username = $("#username").val();
+        var password = $("#password").val();
+        alert("Username: " + username + "\nPassword: " + password);
+    });
+});

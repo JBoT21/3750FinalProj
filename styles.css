@@ -31,10 +31,15 @@ section{
     margin-bottom: 7%;
     margin-left: 4%;
     margin-right: 4%;
-
-
-
     
+}
+#loginpage{
+  color:rgb(21, 79, 51);
+  background-color: azure;
+  margin-top: 10%;
+  margin-bottom: 20%;
+  text-align: center;
+  height: 50vh;
 }
 footer{
     background-color: azure;
@@ -147,6 +152,20 @@ img{
   }
   
   #searchButton {
+    padding: 6px 12px;
+    font-size: 1rem;
+  }
+
+
+  form{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    max-width: 400px;
+    margin: auto;
+  }
+
+  #loginButton{
     padding: 6px 12px;
     font-size: 1rem;
   }
