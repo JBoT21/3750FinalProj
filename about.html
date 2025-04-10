@@ -7,16 +7,18 @@
     <title>Web App Proposal</title>
     </head>
     <body>
+        <div id="navbar"></div>
 
         <header id ="pghead">
             <h1>
                 About Page: Final Project:
-                <img src="/golfly.png">
+                <img src="images/golfly.png">
             
             </h1>
 
             <nav>
-                <a href="/proposal.html"><button>Proposal</button></a>
+                <a href="proposal.html"><button>Proposal</button></a>
+                <a href="baseApp.html"><button>Golfly Store</button></a>
             </nav>
 
         </header>
@@ -41,5 +43,19 @@
                 Ben Simmons: Frontend and Backend<br>
             </h2>
         </section>
+        <!--Script for universal nav bar. Not to be seen in the web app so keep it in the dev pages!-->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                fetch('/navbar.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('navbar').innerHTML = data;
+                    })
+                .catch(error => console.error('Error loading navbar:', error));
+            });
+       </script>
     </body>
+     <footer>
+        <p>© 2025 The Golfly Corp.<br>All rights reserved.</p>
+    </footer>
 </html>

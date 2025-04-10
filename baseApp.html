@@ -11,12 +11,12 @@
         <div class="header-grid">
           <!-- Left: Welcome text -->
           <div class="header-left">
-            <h1>Welcome to <img src="/images/golfly.png"></h1>
+            <h1>Welcome to <img src="images/golfly.png"></h1>
           </div>
       
           <!-- Center: Logo -->
           <div class="header-center">
-            <img src="/images/golflyLogo.png" alt="Golfly Logo" class="logo-main">
+            <img src="images/golflyLogo.png" alt="Golfly Logo" class="logo-main">
           </div>
       
           <!-- Right: Search -->
@@ -28,10 +28,11 @@
       
         <!-- Navigation -->
         <nav id="menu">
-          <a href="#"><button>Home</button></a>
-          <a href="#"><button>Products</button></a>
-          <a href="#"><button>About</button></a>
-          <a href="#"><button>Contact</button></a>
+          <a href="#" id="homeButton"><button>Home</button></a>
+          <a href="#" id="productButton"><button>Products</button></a>
+          <a href="#" id="aboutButton"><button>About</button></a>
+          <a href="#" id="contactButton"><button>Contact</button></a>
+          <a href="about.html"><button> DevPage</button></a>
         </nav>
     </header>
       
@@ -39,11 +40,19 @@
     
 
     <main>
+
+        <section>
+            <h1>Golfly News!</h1>
+            <img src="images/geeMan.png" alt="geeman" id="itemImg">
+            <h1>Congratulations to the 25' IS Masters Champion!</h1>
+
+
+        </section>
         <section>
             <h1>Featured Products</h1>
             <section id="itemDisplay">
                 <h2>Golfly QUANTUM</h2>
-                <img src="/images/golflyQuantum.png" alt="Callaway QUANTUM" id="itemImg">
+                <img src="images/golflyQuantum.png" alt="golfly QUANTUM" id="itemImg">
                 <h3>A club that is out of this world!</h3>
                 <p>Price: $4000</p>
             </section>
@@ -53,7 +62,7 @@
             <h1>New Arrivals</h1>
             <section id="itemDisplay">
                 <h2>Golfly Golfy (set)</h2>
-                <img src="/images/golflyGolfy.png" alt="Callaway QUANTUM" id="itemImg">
+                <img src="images/golflyGolfy.png" alt="golfly golfy" id="itemImg">
                 <h3>An AI powered set of clubs that'll put the pros to shame!</h3>
                 <p>Price: $8000</p>
             </section>
@@ -65,7 +74,7 @@
             <h1>On Sale</h1>
             <section id="itemDisplay">
                 <nav style="display:inline"> </nav>
-                    <img src="/images/cometDriver.png" id="itemImg">
+                    <img src="images/cometDriver.png" id="itemImg">
                         <h2>Golfly Comet Driver v1</h2>
                          <h3>She’s a relic. She’s got charm. She might still ignite on Mars. Grab her while she lasts!</h3>
                          <p>Price: $2000</p>
@@ -78,9 +87,9 @@
 
     
     </main>
-
+   
     <footer>
-        <p>&copy; 2025 Golfly Corp. All rights reserved.</p>
+        <p>&copy; 2025 The Golfly Corp. <br> All rights reserved.</p>
     </footer>
     <script src="logic.js"></script>
 </body>
