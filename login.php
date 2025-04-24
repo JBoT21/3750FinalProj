@@ -21,7 +21,7 @@ $action = $_POST['action'];
 
 if ($action == "register"){
 
-    $stmt = $conn->prepare("SELECT userid, password FROM users WHERE username = ?"); //checks to make sure username doesn't exist
+    $stmt = $conn->prepare("SELECT id, password FROM accounts WHERE username = ?"); //checks to make sure username doesn't exist
     $stmt->bind_param("s", $user);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -30,7 +30,7 @@ if ($action == "register"){
         echo("Username already exists.");
     } else {
         $hashedpass = password_hash($pass, PASSWORD_DEFAULT);
-        $stmt = $conn->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
+        $stmt = $conn->prepare("INSERT INTO accounts (username, pss) VALUES (?, ?)");
         $stmt->bind_param("ss", $user, $hashedpass);
         if ($stmt->execute()) {
             echo("Account created successfully!");
@@ -41,7 +41,7 @@ if ($action == "register"){
 
 } else if ($action === "login") {
     
-    $stmt = $conn->prepare("SELECT userid, password FROM users WHERE username = ?");
+    $stmt = $conn->prepare("SELECT id, pss FROM accounts WHERE username = ?");
     $stmt->bind_param("s", $user);
     $stmt->execute();
     $result = $stmt->get_result();
