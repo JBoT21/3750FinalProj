@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+ini_set('display_errors', 1); //These 3 lines help with debugging
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 $host = ""; //FILL THESE OUT LATER
 $dbName = "";
 $username = "";
