@@ -25,7 +25,8 @@ $("#aboutButton").click(function() {
 });
 
 
-$(document).ready(function() {
+
+$(document).ready(function() { //Work on mysql to input into db
     $("#login").submit(function(event) {
         event.preventDefault();
         var username = $("#username").val();
@@ -33,3 +34,24 @@ $(document).ready(function() {
         alert("Username: " + username + "\nPassword: " + password);
     });
 });
+
+async function submitUser() {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    if (!username || !password) {
+        document.getElementById("loginMessage").textContent = "Please fill in both fields.";
+        return;
+    }
+    const formData = new FormData();
+    formData.append("username", username);
+    formData.append("password", password);
+
+    const response = await fetch("login.php",{
+        method: "POST",
+        body: formData
+    });
+    const result = await response.text();
+   
+
+}
