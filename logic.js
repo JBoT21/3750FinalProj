@@ -35,7 +35,7 @@ $(document).ready(function() { //Work on mysql to input into db
     });
 });
 
-async function submitUser() {
+async function submitUser(action) {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
@@ -46,12 +46,14 @@ async function submitUser() {
     const formData = new FormData();
     formData.append("username", username);
     formData.append("password", password);
+    formData.append("action", action); // "register" or "login"
 
-    const response = await fetch("login.php",{
+    const response = await fetch("login.php", {
         method: "POST",
         body: formData
     });
     const result = await response.text();
-   
+    document.getElementById("loginMessage").textContent = result;
+    document.getElementById("login-status").innerText = "Welcome, " + document.getElementById("username").value + "!";
 
 }

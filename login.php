@@ -17,21 +17,47 @@ if ($conn->connect_error) {
 
 $user = $_POST['username'];
 $pass = $_POST['password'];
+$action = $_POST['action'];
 
-$stmt = $conn->prepare("SELECT id, pss FROM accounts WHERE username = ?");
-$stmt->bind_param("s", $user);
-$stmt->execute();
-$result = $stmt->get_result();
+if ($action == "register"){
 
-if ($row = $result->fetch_assoc()) {
-    if (password_verify($pass, $row['password'])) {
-        $_SESSION['userid'] = $row['userid'];
-        echo("Login successful!");
+    $stmt = $conn->prepare("SELECT userid, password FROM users WHERE username = ?"); //checks to make sure username doesn't exist
+    $stmt->bind_param("s", $user);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        echo("Username already exists.");
     } else {
-        echo("Incorrect password.");
+        $hashedpass = password_hash($pass, PASSWORD_DEFAULT);
+        $stmt = $conn->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
+        $stmt->bind_param("ss", $user, $hashedpass);
+        if ($stmt->execute()) {
+            echo("Account created successfully!");
+        } else {
+            echo "Error with account creation.";
+        }
+    }
+
+} else if ($action === "login") {
+    
+    $stmt = $conn->prepare("SELECT userid, password FROM users WHERE username = ?");
+    $stmt->bind_param("s", $user);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($row = $result->fetch_assoc()) {
+        if (password_verify($pass, $row['password'])) {
+            $_SESSION['userid'] = $row['userid'];
+            echo("Login successful!");
+        } else {
+            echo("Incorrect password.");
+        }
+    } else {
+        echo("Username not found.");
     }
 } else {
-    echo("Username not found.");
+    echo ("I'm not even sure how you did this, but it's invalid.");
 }
 
 $conn->close();
