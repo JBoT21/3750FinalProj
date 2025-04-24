@@ -47,8 +47,8 @@ if ($action == "register"){
     $result = $stmt->get_result();
 
     if ($row = $result->fetch_assoc()) {
-        if (password_verify($pass, $row['password'])) {
-            $_SESSION['userid'] = $row['userid'];
+        if (password_verify($pass, $row['pss'])) {
+            $_SESSION['id'] = $row['id'];
             echo("Login successful!");
         } else {
             echo("Incorrect password.");
