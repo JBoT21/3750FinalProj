@@ -9,7 +9,20 @@ $("#searchButton").click(function() {
     alert(searchTerm);
 });
 
+$("#homeButton").click(function() {
+    document.location = "baseApp.php";
+});
 
+$("#productButton").click(function() {
+    document.location = "products.php";
+});
+
+$("#contactButton").click(function() {
+    alert("Contact button clicked!");
+});
+$("#aboutButton").click(function() {
+    alert("About button clicked!");
+});
 
 
 
@@ -19,28 +32,6 @@ $(document).ready(function() { //Work on mysql to input into db
         var username = $("#username").val();
         var password = $("#password").val();
         alert("Username: " + username + "\nPassword: " + password);
+        document.location = "products.html";
     });
 });
-
-async function submitUser(action) {
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
-
-    if (!username || !password) {
-        document.getElementById("loginMessage").textContent = "Please fill in both fields.";
-        return;
-    }
-    const formData = new FormData();
-    formData.append("username", username);
-    formData.append("password", password);
-    formData.append("action", action); // "register" or "login"
-
-    const response = await fetch("login.php", {
-        method: "POST",
-        body: formData
-    });
-    const result = await response.text();
-    document.getElementById("loginMessage").textContent = result;
-    document.getElementById("login-status").innerText = "Welcome, " + document.getElementById("username").value + "!";
-
-}
