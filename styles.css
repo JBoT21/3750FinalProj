@@ -97,6 +97,10 @@ button:hover{
     color:black
 }
 
+#addToCart{
+    font-size: x-large;
+}
+
 img{
     width: 150px;
     height: auto;
