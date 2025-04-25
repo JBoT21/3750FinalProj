@@ -5,17 +5,17 @@ const iron = document.getElementById("iron");
 const putter = document.getElementById("putter");
 
 driver.addEventListener("click", function(){
-    document.location = "drivers.html"
+    document.location = "drivers.php"
 });
 wood.addEventListener("click", function(){
-    document.location = "woods.html"
+    document.location = "woods.php"
 });
 
 iron.addEventListener("click", function(){
-    document.location = "irons.html"
+    document.location = "irons.php"
 });
 
 putter.addEventListener("click", function(){
-    document.location = "putters.html"
+    document.location = "putters.php"
 });
 

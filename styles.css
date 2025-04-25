@@ -97,10 +97,6 @@ button:hover{
     color:black
 }
 
-#addToCart{
-    font-size: x-large;
-}
-
 img{
     width: 150px;
     height: auto;
@@ -261,12 +257,7 @@ img{
     opacity: 1;
   }
 
-  .club-type{
-    text-align: center;
-    display: flex;
-    padding: 10px;
-    border-radius: 20px;
-  }
+
 
 
 
@@ -321,4 +312,59 @@ nav ul li {
 nav ul li:last-child {
   margin-right: 0;
 }
+
+
+/* Styles for drivers, irons, woods, putters pages */
+.item{
+  background-color: azure;
+}
+
+.item img{
+  width: 250px;
+}
+
+.item-container{
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  justify-content: center;
+  padding: 3%;
+  background-color: azure;
+}
+
+.item-info h1{
+  color: red;
+  font-weight: bold;
+}
+
+.item-info h2{
+  color: rgb(21, 79, 51);
+  font-weight: bold;
+}
+
+.item-info p{
+  color: rgb(21, 79, 51);
+}
+
+.reviews img{
+  width: 25px;
+  margin-right: 5px;
+}
+
+.item-info{
+  width: fit-content;
+}
+
+
+
+.reviews{
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  margin-bottom: 10px;
+}
   
+.clubs{
+  margin-left: 4%;
+  margin-right: 4%;
+}
