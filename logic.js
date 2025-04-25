@@ -9,20 +9,7 @@ $("#searchButton").click(function() {
     alert(searchTerm);
 });
 
-$("#homeButton").click(function() {
-    alert("Home button clicked!");
-});
 
-$("#productButton").click(function() {
-    alert("Product button clicked!");
-});
-
-$("#contactButton").click(function() {
-    alert("Contact button clicked!");
-});
-$("#aboutButton").click(function() {
-    alert("About button clicked!");
-});
 
 
 

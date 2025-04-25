@@ -257,7 +257,12 @@ img{
     opacity: 1;
   }
 
-
+  .club-type{
+    text-align: center;
+    display: flex;
+    padding: 10px;
+    border-radius: 20px;
+  }
 
 
 
