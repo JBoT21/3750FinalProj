@@ -40,8 +40,8 @@
       
         <!-- Navigation -->
         <nav id="menu">
-          <a href="baseApp.html" id="homeButton"><button>Home</button></a>
-          <a href="products.html" id="productButton"><button>Products</button></a>
+          <a href="baseApp.php" id="homeButton"><button>Home</button></a>
+          <a href="products.php" id="productButton"><button>Products</button></a>
           <a href="#" id="aboutButton"><button>About</button></a>
           <a href="#" id="contactButton"><button>Contact</button></a>
           <a href="about.html"><button>DevPage</button></a>
