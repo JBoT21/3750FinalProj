@@ -5,7 +5,7 @@ ini_set('display_errors', 1); //These 3 lines help with debugging
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$servername = "localhost"; //FILL THESE OUT LATER
+$servername = "localhost";
 $dbName = "finalprojdb";
 $username = "root";
 $password = "Bus2003s";
