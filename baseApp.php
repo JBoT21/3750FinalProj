@@ -39,6 +39,7 @@
           <a href="products.php" id="productButton"><button>Products</button></a>
           <a href="about.html" id="productButton"><button>About</button></a>
           <a href="proposal.html" id="productButton"><button>Proposal</button></a>
+          <a href="features.html" id="productButton"><button>Features</button></a>
           <a href="cart.php" id="productButton"><button>View Cart</button></a>
         </nav>
       </header>
