@@ -24,7 +24,7 @@
           <div class="header-right">
             
             <!-- NEW: Login Button added above search bar -->
-            <a href="login.html"><button id="loginButton">Login</button></a>
+            <a href="login.php"><button id="loginButton">Login</button></a>
       
             <!-- Search bar stays below the login button -->
             <div id="search">
@@ -37,8 +37,8 @@
       
         <!-- Navigation -->
         <nav id="menu">
-          <a href="" id="homeButton"><button>Home</button></a>
-          <a href="products.html" id="productButton"><button>Products</button></a>
+          <a href="baseApp.php" id="homeButton"><button>Home</button></a>
+          <a href="products.php" id="productButton"><button>Products</button></a>
           <a href="#" id="aboutButton"><button>About</button></a>
           <a href="#" id="contactButton"><button>Contact</button></a>
           <a href="about.html"><button>DevPage</button></a>
