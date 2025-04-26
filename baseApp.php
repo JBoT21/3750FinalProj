@@ -1,7 +1,6 @@
 <?php
     session_start();
     $user = $_SESSION['username'];
-    echo $user;
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,7 +11,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <header id="pghead">
+<header id="pghead">
         <div class="header-grid">
           
           <!-- Left: Welcome text -->
@@ -29,24 +28,18 @@
           <div class="header-right">
             
             <!-- NEW: Login Button added above search bar -->
-            <a href="login.php"><button>Login</button></a>
-      
-            <!-- Search bar stays below the login button -->
-            <div id="search">
-              <button id="searchButton">Search</button>
-              <input type="text" id="searchInput" placeholder="Search for products...">
-            </div>
+            <a href="login.php"><button id="loginButton">Logout</button></a>
       
           </div>
         </div>
       
         <!-- Navigation -->
         <nav id="menu">
-          <a href="#" id="homeButton"><button>Home</button></a>
-          <a href="#" id="productButton"><button>Products</button></a>
-          <a href="#" id="aboutButton"><button>About</button></a>
-          <a href="#" id="contactButton"><button>Contact</button></a>
-          <a href="about.html"><button>DevPage</button></a>
+          <a href="baseApp.php" id="homeButton"><button>Home</button></a>
+          <a href="products.php" id="productButton"><button>Products</button></a>
+          <a href="about.html" id="productButton"><button>About</button></a>
+          <a href="proposal.html" id="productButton"><button>Proposal</button></a>
+          <a href="cart.php" id="productButton"><button>View Cart</button></a>
         </nav>
       </header>
       

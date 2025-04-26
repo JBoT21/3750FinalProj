@@ -1,3 +1,7 @@
+<?php
+  session_start();
+  $user = $_SESSION["username"];
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,13 +26,7 @@
           <div class="header-right">
             
             <!-- NEW: Login Button added above search bar -->
-            <a href="login.php"><button id="loginButton">Login</button></a>
-      
-            <!-- Search bar stays below the login button -->
-            <div id="search">
-              <button id="searchButton">Search</button>
-              <input type="text" id="searchInput" placeholder="Search for products...">
-            </div>
+            <a href="login.php"><button id="loginButton">Logout</button></a>
       
           </div>
         </div>
@@ -37,9 +35,9 @@
         <nav id="menu">
           <a href="baseApp.php" id="homeButton"><button>Home</button></a>
           <a href="products.php" id="productButton"><button>Products</button></a>
-          <a href="#" id="aboutButton"><button>About</button></a>
-          <a href="#" id="contactButton"><button>Contact</button></a>
-          <a href="about.html"><button>DevPage</button></a>
+          <a href="about.html" id="productButton"><button>About</button></a>
+          <a href="proposal.html" id="productButton"><button>Proposal</button></a>
+          <a href="cart.php" id="productButton"><button>View Cart</button></a>
         </nav>
       </header>
     </html>

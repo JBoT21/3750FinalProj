@@ -1,7 +1,6 @@
 <?php
   session_start();
   $user = $_SESSION["username"];
-  echo $user;
 ?>
 <!DOCTYPE html>
 <html>
@@ -29,56 +28,52 @@
             <!-- NEW: Login Button added above search bar -->
             <a href="login.php"><button id="loginButton">Logout</button></a>
       
-            <!-- Search bar stays below the login button -->
-            <div id="search">
-              <button id="searchButton">Search</button>
-              <input type="text" id="searchInput" placeholder="Search for products...">
-            </div>
-      
           </div>
         </div>
       
         <!-- Navigation -->
         <nav id="menu">
-          <a href="" id="homeButton"><button>Home</button></a>
-          <a href="products.html" id="productButton"><button>Products</button></a>
-          <a href="#" id="aboutButton"><button>About</button></a>
-          <a href="#" id="contactButton"><button>Contact</button></a>
-          <a href="about.html"><button>DevPage</button></a>
+          <a href="baseApp.php" id="homeButton"><button>Home</button></a>
+          <a href="products.php" id="productButton"><button>Products</button></a>
+          <a href="about.html" id="productButton"><button>About</button></a>
+          <a href="proposal.html" id="productButton"><button>Proposal</button></a>
+          <a href="cart.php" id="productButton"><button>View Cart</button></a>
         </nav>
       </header>
 
       <body>
-        <div class="clubs">
-          <div class="item-container">
-            <div class="item-info">
-              <h1>New!</h1>
-              <h2>Meta Dark Moon Elite</h2>
-              <p>Price: $1499.99</p>
-              <div class="reviews">
-                <img src="images/star.png" alt="">
-                <img src="images/star.png" alt="">
-                <img src="images/star.png" alt="">
-                <img src="images/star.png" alt="">
-                <img src="images/star.png" alt="">
-              </div>
-              <form action="addToCart.php" method="POST">
-                <input type="hidden" name="itemName" value="Meta Dark Moon Elite">
-                <input type="hidden" name="price" value="1499.99">
-                <input type="hidden" name="qty" value="1">
-                <input type="hidden" name="item_img" value="images/darkMoonDriver.png">
-                <!-- <input type="hidden" name="user" value="<?php echo htmlspecialchars($username); ?>"> -->
-                <button type="submit">Add To Cart</button>
+          <section>
+                <h1>Drivers</h1>
+                <h3> 
+                Golfly drivers are engineered for maximum distance and stellar performance, crafted with technologies light-years ahead of their time. 
+                Blast your shots off the tee with unstoppable power and send your drives soaring across the galaxy.
+                </h3>
+          </section>
+          <section class="store-item">
+                <h2><strong>Meta Dark Moon Elite</strong></h2>
+                <div class="reviews">
+                  <img src="images/star.png" alt="">
+                  <img src="images/star.png" alt="">
+                  <img src="images/star.png" alt="">
+                  <img src="images/star.png" alt="">
+                  <img src="images/star.png" alt="">
+                </div>
+                <img src="images/darkMoonDriver.png" alt="Meta Dark Moon Elite" id="itemImg">
+                <p>
+                    <strong>Price:</strong> $1499.99
+                <p>
+                  
+               
+                <form action="addToCart.php" method="POST">
+                  <input type="hidden" name="itemName" value="Meta Dark Moon Elite">
+                  <input type="hidden" name="price" value="1499.99">
+                  <input type="hidden" name="qty" value="1">
+                  <input type="hidden" name="item_img" value="images/darkMoonDriver.png">
+                  <!-- <input type="hidden" name="user" value="<?php echo htmlspecialchars($username); ?>"> -->
+                  <button type="submit">Add To Cart</button>
               </form>
-            </div>
-            <div class="item">
-              <img src="images/darkMoonDriver.png" alt="">
-            </div>
-          </div>
-          
-        </div>
-        
-       
+
+            </section>
       </body>
     </html>
     

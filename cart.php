@@ -7,7 +7,6 @@
     $DBname = "finalprojdb";
     $tableName = "cart";
     $user = $_SESSION["username"];
-    echo $user;
 
     // Create connection
     $conn = new mysqli($serverName, $username, $sqlpassword, $DBname);
@@ -41,11 +40,6 @@
             <!-- NEW: Login Button added above search bar -->
             <a href="login.php"><button id="loginButton">Logout</button></a>
       
-            <!-- Search bar stays below the login button -->
-            <div id="search">
-              <button id="searchButton">Search</button>
-              <input type="text" id="searchInput" placeholder="Search for products...">
-            </div>
       
           </div>
         </div>
@@ -58,24 +52,36 @@
       </header>
 
       <?php
-
         $result = $conn->query("SELECT itemName, user, qty, item_img, price FROM $tableName");
+        $total = 0;
         if ($result->num_rows > 0) {
             echo '<div class="cart">';
-            echo '<ul>';
             while ($row = $result->fetch_assoc()) {
                 if($user == $row['user']){
-                    echo $row['user'];
-                    echo '<li>';
-                    echo $row['itemName'];
-                    echo '<button class="remove-btn" data-title="' . htmlspecialchars($row["itemName"], ENT_QUOTES) . '">Remove from cart</button>';
-                    echo '</li>';
+                  echo '<div class="cart-item">';
+                  echo '<div class="cart-info">';
+                  echo '<p>';
+                  echo $row['itemName'];
+                  echo '</p>';
+                  echo '<p>';
+                  echo '$';
+                  echo $row['price'];
+                  echo '</p>';
+                  echo '</div>';
+                  $total += $row['price'];
+                  echo '<button class="remove-btn" data-item-name="' . htmlspecialchars($row["itemName"], ENT_QUOTES) . '">Remove from cart</button>';
+                  echo '</div>';
                 } 
             }
-            echo '</ul>';
+            echo '<h1>';
+            echo 'Total = $';
+            echo $total;
+            echo '</h1>';
+            echo '<button id="checkOut" data-user="' . htmlspecialchars($user, ENT_QUOTES) . '">Check Out</button>';
             echo '</div>';
         } else {
             echo "<p>No records found.</p>";
         }
       ?>
+      <div id="purchased"></div>
     </html>

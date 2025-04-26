@@ -5,7 +5,7 @@ ini_set('display_errors', 1); //These 3 lines help with debugging
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$servername = "localhost";
+$servername = "localhost"; //FILL THESE OUT LATER
 $dbName = "finalprojdb";
 $username = "root";
 $password = "Bus2003s";
@@ -76,8 +76,10 @@ if (isset($_POST["username"], $_POST["password"])) {
             <input type="password" id="password" name="password" placeholder="Password" required>
             <button type="submit" id = "loginButton">Login</button><br>
         </form>
-        <a href="addAccount.php"><button>Sign Up</button></a>
-        <a href="baseApp.php"><button>Back</button></a>
+        <div class="login-btns">
+            <a href="addAccount.php"><button id="login-btn">Sign Up</button></a>
+        </div>
+       
     </section>
 
     <!-- <script src="logic.js"></script> -->

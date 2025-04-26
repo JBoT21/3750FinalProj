@@ -35,3 +35,4 @@ $(document).ready(function() { //Work on mysql to input into db
         document.location = "products.html";
     });
 });
+

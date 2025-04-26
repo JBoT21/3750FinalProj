@@ -5,7 +5,19 @@ html{
     
 }
 
+.store-item{
+  border: 20px solid rgb(21, 79, 51);
+}
+
+.store-item img{
+  width: 30%;
+  height: auto;
+}
 section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(232, 253, 230);
     text-align: center;
     padding: 1%;
@@ -315,6 +327,8 @@ nav ul li:last-child {
 
 
 /* Styles for drivers, irons, woods, putters pages */
+
+
 .item{
   background-color: azure;
 }
@@ -367,4 +381,38 @@ nav ul li:last-child {
 .clubs{
   margin-left: 4%;
   margin-right: 4%;
+}
+
+
+/* CART PAGE STYLES */
+.cart{
+  background-color: azure;
+  margin-left: 4%;
+  margin-right: 4%;
+  padding: 2%;
+}
+
+.cart-item{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: 1px solid black;
+}
+
+.cart-info{
+  display: flex;
+  flex-direction: row;
+  width: 25%;
+  justify-content: space-between;
+}
+
+
+/* Login Page Styles */
+#login-btn{
+  padding: 10px;
+}
+
+.login-btns{
+  display: flex;
+  flex-direction: row;
 }
