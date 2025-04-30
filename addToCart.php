@@ -5,9 +5,9 @@
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
     $serverName = "localhost";
-    $username = "root";
-    $sqlpassword = "Bus2003s";
-    $DBname = "finalprojdb";
+    $username = "nmnzbzmy_clemsontg1";
+    $sqlpassword = "Datiboy@01";
+    $DBname = "nmnzbzmy_finalprojdb";
     $tableName = "cart";
     $user = $_SESSION["username"];
 

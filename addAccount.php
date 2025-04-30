@@ -1,9 +1,9 @@
 <?php
         // MySql Connection Variables
         $servername = "localhost";
-        $username = "root";
-        $sqlpassword = "Bus2003s";
-        $DBname = "finalprojdb";
+        $username = "nmnzbzmy_clemsontg1";
+        $sqlpassword = "Datiboy@01";
+        $DBname = "nmnzbzmy_finalprojdb";
         $tableName = "accounts";
     
         // Create connection

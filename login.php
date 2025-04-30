@@ -6,10 +6,13 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 $servername = "localhost"; //FILL THESE OUT LATER
-$dbName = "finalprojdb";
-$username = "root";
-$password = "Bus2003s";
+$dbName = "nmnzbzmy_finalprojdb";
+$username = "nmnzbzmy_clemsontg1";
+$password = "Datiboy@01";
 $tableName = "accounts";
+
+
+
 
 $conn = new mysqli($servername, $username, $password, $dbName);
 if ($conn->connect_error) {

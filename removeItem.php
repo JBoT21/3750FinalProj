@@ -9,9 +9,9 @@
 
     // MySql Connection Variables
     $servername = "localhost";
-    $user = "root";
-    $sqlpassword = "Bus2003s";
-    $DBname = "finalprojdb";
+    $user = "nmnzbzmy_finalprojdb";
+    $sqlpassword = "Datiboy@01";
+    $DBname = "nmnzbzmy_finalprojdb";
     $tableName = "cart";
     $username = $_SESSION["username"];
     // Create connection
