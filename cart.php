@@ -77,7 +77,7 @@
             echo 'Total = $';
             echo $total;
             echo '</h1>';
-            echo '<button id="checkOut" data-user="' . htmlspecialchars($user, ENT_QUOTES) . '">Check Out</button>';
+            echo '<button onclick="location.href = \'thankyou.php\';" id="checkOut" data-user="' . htmlspecialchars($user, ENT_QUOTES) . '">Check Out</button>';
             echo '</div>';
         } else {
             echo "<p>No records found.</p>";
